@@ -36,3 +36,81 @@ h1 {
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
   cursor: pointer;
 }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-height: 80vh;
+  max-width: 90vw;
+  display:block;
+  margin: auto;
+  border: 2px solid rgba(255,0,0,0.3);
+  box-shadow: 0 0 20px rgba(255,0,0,0.6), 0 0 40px rgba(255,0,0,0.4), 0 0 60px rgba(255,0,0,0.2);
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.lightbox-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lightbox-buttons button{
+  padding: 10px;
+  font-size: 24px;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.lightbox-buttons button:hover {
+  background: rgba(255,255,255,0.3);
+}
+.prev,.next {
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff4444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right:30px;
+  color: white ;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 102;
+}
+
+.lightbox .prev:hover, .lightbox.next:hover {
+  background-color: #cc0000;
+}
+
+.lightbox-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
